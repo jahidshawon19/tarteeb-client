@@ -5,7 +5,7 @@ const SingleClub = ({clubData}) => {
     const {img, club_name} = clubData
     return (
         <>
-                <div className="col-lg-3">
+                <div className="col-lg-3 mt-4">
                         <div className="card">
                                 <img className="card-img-top" src={img} alt="Card image cap" />
                                 <div className="card-body text-center">

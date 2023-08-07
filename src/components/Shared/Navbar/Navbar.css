@@ -36,7 +36,10 @@
     }
     
     .header-btn:hover{background-color: #fea540;
-    cursor: pointer;}
+    cursor: pointer;
+        text-decoration: none;
+        color:#ffffff;
+}
     
     .navbar-scroll{background-color: #ffffff;
     padding: 0;

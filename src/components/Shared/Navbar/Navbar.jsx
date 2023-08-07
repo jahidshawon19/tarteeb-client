@@ -1,7 +1,18 @@
 
+import { useContext } from 'react';
 import './Navbar.css'; 
+import { AuthContext } from '../../../Context/userContext';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+
+  const {user, logOut} = useContext(AuthContext)
+
+  const handleLogut =()=>{
+    logOut()
+    .then(()=>{})
+    .catch(()=>{})
+  }
     return (
         <>
  <header className="header">
@@ -22,7 +33,7 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav m-auto">
             <li className="nav-item">
-              <a className="nav-link" href="#">Home</a>
+              <Link className="nav-link" to="/">Home</Link>
             </li>
 
       
@@ -41,21 +52,30 @@ const Navbar = () => {
                 <a className="nav-link" href="#">Career</a>
             </li>
 
-            <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Jhon
-                </a>
-                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a className="dropdown-item" href="#">Founder</a>
-                  <a className="dropdown-item" href="#">Group at a Glance</a>
-                  <a className="dropdown-item" href="#">Mission & values</a>
-                  <a className="dropdown-item" href="#">Board of Directors</a>
-                  <a className="dropdown-item" href="#">Key Management</a>
-                </div>
-              </li>
+
+
+            {
+              user?.email?<li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {user.email}
+              </a>
+              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <button className="dropdown-item btn btn-danger btn-sm" onClick={handleLogut}>Logout</button>
+
+              </div>
+            </li>
+            :
+            <li className="nav-item">
+              <Link className="nav-link" to="/login">Login</Link>
+            </li>
+            }
+
           </ul>
           <form className="form-inline my-2 my-lg-0">
-            <button className="header-btn my-2 my-sm-0" type="submit">Create account</button>
+            {
+              !user?.email &&<Link className="header-btn my-2 my-sm-0" type="submit" to="/register">Create account</Link>
+            }
+            
           </form>
         </div>
       </nav>
