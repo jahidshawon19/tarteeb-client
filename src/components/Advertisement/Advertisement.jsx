@@ -13,12 +13,12 @@ const Advertisement = () => {
                             <img src="https://www.venuelook.com/images/new-home-images/dsetination.png" className="img-fluid" alt="" />
                         </div>
                         <div className="col-lg-6 mt-5">
-                            <h3 className="home-adv-title">Events & Wedding Destinations in Chittagong</h3>
+                            <h3>Events & Wedding Destinations in Bangladesh</h3>
                             <p className="DESTP_pp">Your next destination is closer than you think.<br/>
                             Discover it here.
                             </p>
 
-                            <button className="btn btn-block btn-lg btn-outline-danger">See all Destinations</button>
+                            <button className="btn btn-block btn-lg btn-outline-danger">See all Conventions</button>
                         </div>
                     </div>
                 </div>

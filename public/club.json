@@ -1,0 +1,91 @@
+[
+    {
+        "club_id": "1",
+        "club_name":"International Convention Center",
+        "location":"281 Chatteswari Road, Chattogram 4000",
+        "capacity":"5000",
+        "rent":" 2,20,000 BDT",
+        "contact":"01886972211",
+        "description":"Escape to the tranquil Riverside Retreat, where nature's beauty blends with refined comfort. With a capacity of 100 guests, our venue offers stunning riverside views and outdoor seating options for intimate gatherings, private parties, and family celebrations. Our event planning services take care of every detail, ensuring a stress-free experience for you and your guests. Whether it's a birthday celebration or a family reunion, Riverside Retreat promises cherished memories in a serene setting. Book now and experience the peace and joy of riverside celebrations.",
+        "img":"https://lh3.googleusercontent.com/p/AF1QipNFH0t2-zvfjjuDgLQCRxbh1BhZOV0iEy9ds8Q-=s680-w480-h310",
+        "related_img":["https://lh3.googleusercontent.com/p/AF1QipN5kaDIxg4AIN3GeqS6VJpiBwgVZu5PCEgtFf4B=s680-w680-h510", "https://lh3.googleusercontent.com/p/AF1QipPWeRmHmkg15vfgPQYWi4dZQb8clmUs6u7emaJE=s680-w680-h510", "https://lh3.googleusercontent.com/p/AF1QipOJ61x8k9118dwi6wMvSB6QXwpafXRs1aKbQ_IC=s680-w680-h510","https://lh3.googleusercontent.com/p/AF1QipO8S3rmQ6oXd0jSxEwege6aMeLXQF_k0We8bpJV=s680-w680-h510"]
+    },
+    {
+        "club_id": "2",
+        "club_name":"Chittagong Ladies Club",
+        "location":"Shahid Saifuddin Khaled Rd, Chattogram 4000",
+        "capacity":"2300",
+        "rent":"1,23000",
+        "contact":"01899010234",
+        "description":"Escape to the tranquil Riverside Retreat, where nature's beauty blends with refined comfort. With a capacity of 100 guests, our venue offers stunning riverside views and outdoor seating options for intimate gatherings, private parties, and family celebrations. Our event planning services take care of every detail, ensuring a stress-free experience for you and your guests. Whether it's a birthday celebration or a family reunion, Riverside Retreat promises cherished memories in a serene setting. Book now and experience the peace and joy of riverside celebrations.",
+        "img":"https://lh3.googleusercontent.com/p/AF1QipNXfU_sONEDujCz6byj-rx9q0AHlILaelQp67Mh=s680-w680-h310",
+        "related_img":[]
+    },
+    {
+        "club_id": "3",
+        "club_name":"",
+        "location":"The King Of Chittagong and Marraige Garden Road, Panchlaish, Chattogram 4000",
+        "capacity":"1500",
+        "rent":"1,20000",
+        "contact":"01899010234",
+        "description":"Escape to the tranquil Riverside Retreat, where nature's beauty blends with refined comfort. With a capacity of 100 guests, our venue offers stunning riverside views and outdoor seating options for intimate gatherings, private parties, and family celebrations. Our event planning services take care of every detail, ensuring a stress-free experience for you and your guests. Whether it's a birthday celebration or a family reunion, Riverside Retreat promises cherished memories in a serene setting. Book now and experience the peace and joy of riverside celebrations.",
+        "img":"https://lh3.googleusercontent.com/p/AF1QipNQroHKfwER-4_eErWuUynqs451TMd5zleSvsvk=s680-w680-h310",
+        "related_img":[]
+    },
+    {
+        "club_id": "4",
+        "club_name":"Navy Convention Hall",
+        "location":"Tigerpass Circle, Ambagan Road, Chattogram",
+        "capacity":"1200",
+        "rent":"1,00000",
+        "contact":"01899010234",
+        "description":"Escape to the tranquil Riverside Retreat, where nature's beauty blends with refined comfort. With a capacity of 100 guests, our venue offers stunning riverside views and outdoor seating options for intimate gatherings, private parties, and family celebrations. Our event planning services take care of every detail, ensuring a stress-free experience for you and your guests. Whether it's a birthday celebration or a family reunion, Riverside Retreat promises cherished memories in a serene setting. Book now and experience the peace and joy of riverside celebrations.",
+        "img":"https://lh3.googleusercontent.com/p/AF1QipMvd4cOlTpuos12V4Dh9BxvfUC8J856tEcFoqRn=s680-w680-h310",
+        "related_img":[] 
+    },
+    {
+        "club_id": "5",
+        "club_name":"Hall 24 Convention",
+        "location":"8RVF+X4C, Chattogram",
+        "capacity":"500",
+        "rent":"90,000",
+        "contact":"01899010234",
+        "description":"Escape to the tranquil Riverside Retreat, where nature's beauty blends with refined comfort. With a capacity of 100 guests, our venue offers stunning riverside views and outdoor seating options for intimate gatherings, private parties, and family celebrations. Our event planning services take care of every detail, ensuring a stress-free experience for you and your guests. Whether it's a birthday celebration or a family reunion, Riverside Retreat promises cherished memories in a serene setting. Book now and experience the peace and joy of riverside celebrations.",
+        "img":"https://lh3.googleusercontent.com/p/AF1QipPMN0sudSAW4J8Yg_5NynFXjbdrk6adXXPctkYL=s680-w680-h310" ,
+        "related_img":[]
+    },
+    {
+        "club_id": "6",
+        "club_name":"City Hall",
+        "location":"",
+        "capacity":"500",
+        "rent":"8QHR+GVW, Agrabad Access Rd, Chattogram 4100",
+        "contact":"01899010234",
+        "description":"Escape to the tranquil Riverside Retreat, where nature's beauty blends with refined comfort. With a capacity of 100 guests, our venue offers stunning riverside views and outdoor seating options for intimate gatherings, private parties, and family celebrations. Our event planning services take care of every detail, ensuring a stress-free experience for you and your guests. Whether it's a birthday celebration or a family reunion, Riverside Retreat promises cherished memories in a serene setting. Book now and experience the peace and joy of riverside celebrations.",
+        "img":"https://lh3.googleusercontent.com/p/AF1QipOAr-oDF3KcPVS7Z7F1lUxzr2FRjwqGDLJQjBho=s680-w680-h310",
+        "related_img":[] 
+    },
+    {
+        "club_id": "7",
+        "club_name":"Chittagong Boat Club",
+        "location":"",
+        "capacity":"200",
+        "rent":" Potenga Rd, Chattogram",
+        "contact":"01899010234",
+        "description":"Escape to the tranquil Riverside Retreat, where nature's beauty blends with refined comfort. With a capacity of 100 guests, our venue offers stunning riverside views and outdoor seating options for intimate gatherings, private parties, and family celebrations. Our event planning services take care of every detail, ensuring a stress-free experience for you and your guests. Whether it's a birthday celebration or a family reunion, Riverside Retreat promises cherished memories in a serene setting. Book now and experience the peace and joy of riverside celebrations.",
+        "img":"https://lh3.googleusercontent.com/p/AF1QipPnxajM6IuwAtZY3Y4Z2aXYiM6Ou3dkb917G6r_=s680-w680-h310",
+        "related_img":[]
+    },
+    {
+        "club_id": "8",
+        "club_name":"City Hall",
+        "location":"1 Shahid Abdul Halim Rd, Chittagong",
+        "capacity":"1300",
+        "rent":"1 Shahid Abdul Halim Rd, Chittagong",
+        "contact":"01899010234",
+        "description":"Escape to the tranquil Riverside Retreat, where nature's beauty blends with refined comfort. With a capacity of 100 guests, our venue offers stunning riverside views and outdoor seating options for intimate gatherings, private parties, and family celebrations. Our event planning services take care of every detail, ensuring a stress-free experience for you and your guests. Whether it's a birthday celebration or a family reunion, Riverside Retreat promises cherished memories in a serene setting. Book now and experience the peace and joy of riverside celebrations.",
+        "img":"https://lh3.googleusercontent.com/p/AF1QipP0US2RO-Ml2l9FWVR3azzvceuw_3xbODRlfK2l=s680-w680-h310",
+        "related_img":[]
+    }
+
+]

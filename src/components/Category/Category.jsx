@@ -3,7 +3,7 @@ import './Category.css'
 const Category = () => {
     return (
         <>
-                                <div className="category-container mt-5">
+                <div className="category-container mt-5">
                         <div className="category">
                             
                                 <img src="https://cdn.venuelook.com/images/new-home-images/ring.png" alt="" />
@@ -40,7 +40,7 @@ const Category = () => {
                                 <p className='event-p'>Weeding</p>
                            
                         </div>
-                    </div>
+                </div>
         </>
     );
 };
