@@ -7,7 +7,7 @@ import SingleClub from './SingleClub';
 const Clubs = () => {
     const [clubs, setClubs] = useState([])
     useEffect(()=>{
-        fetch('club.json')
+        fetch('http://localhost:5000/clubs')
         .then(res=>res.json())
         .then(data =>{
             setClubs(data)

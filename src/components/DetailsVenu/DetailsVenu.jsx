@@ -1,22 +1,25 @@
+import { useLoaderData } from "react-router-dom";
 import DetailsBanner from "../DetailsBanner/DetailsBanner";
 
 import './DetailsVenu.css'; 
 
 const DetailsVenu = () => {
+    const venuData = useLoaderData()
+    const {club_name,location,capacity,rent,contact,description,img}= venuData
     return (
         <>
-            <DetailsBanner></DetailsBanner>
+            <DetailsBanner venueData={venuData}></DetailsBanner>
 
             <section className="venue- details-section py-5">
                 
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
-                            <h4 className="text-warning">Welcome to International Convention Center</h4>
+                            <h4 className="text-warning">Welcome to {club_name}</h4>
 
                      
                             <p className="venue-details-text text-justify">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aliquid excepturi delectus placeat sit. Eaque mollitia asperiores aliquam sed labore voluptatibus consectetur consequuntur ad quae sunt praesentium assumenda incidunt maxime, culpa officia consequatur iusto sint cupiditate. Consequatur, alias eligendi beatae natus asperiores eum saepe modi est perferendis, animi ex voluptatum.
+                                    {description}
                             </p>
                         </div>
 
@@ -26,10 +29,10 @@ const DetailsVenu = () => {
                                     <button className="btn btn-success btn-block" data-toggle="modal" data-target="#exampleModal">Request for Booking</button>
                                 </div>
                                 <ul className="list-group list-group-flush">
-                                    <li className="list-group-item">Location: 281 Chatteswari Road, Chattogram 4000</li>
-                                    <li className="list-group-item">Capacity:  5000</li>
-                                    <li className="list-group-item">Phone: 01886972211</li>
-                                    <li className="list-group-item">Floor Rent: 2,20,000 BDT</li>
+                                    <li className="list-group-item">Location: {location}</li>
+                                    <li className="list-group-item">Capacity:  {capacity}</li>
+                                    <li className="list-group-item">Phone: {contact}</li>
+                                    <li className="list-group-item">Floor Rent: {rent} BDT</li>
                                 </ul>
                             </div>
                         </div>
