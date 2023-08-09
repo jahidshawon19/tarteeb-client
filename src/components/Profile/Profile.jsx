@@ -12,6 +12,8 @@ const Profile = () => {
         .then(res=>res.json())
         .then(data=>setOrder(data))
     },[])
+
+    console.log(order)
     return (
         <>
             <SecondNavbar></SecondNavbar>
@@ -19,7 +21,7 @@ const Profile = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
-                            <h4 className="text-secondary">Proma Barua</h4>
+                        
                         </div>
                     </div>
 
@@ -47,7 +49,8 @@ const Profile = () => {
                                         <td>{od.event}</td>
                                         <td>{od.date}</td>
                                         
-                                        <td><button className="btn btn-danger">Pending</button></td>
+                                        
+                                        <td><button className="btn btn-danger btn-sm">Pending</button></td>
                                         </tr>
                                     ))
                           

@@ -1,12 +1,16 @@
 import { useContext } from 'react';
 import './Login.css';
 import { AuthContext } from '../../context/UserContext';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SecondNavbar from '../Shared/SecondNavbar/SecondNavbar';
 
 
 const Login = () => {
     const {loginUser} = useContext(AuthContext)
+    const navigate = useNavigate()
+    const location = useLocation()
+
+    const redirectedURL = location.state?.from?.pathname || '/'
 
     const handleLogin = (e)=>{
         e.preventDefault()
@@ -16,7 +20,8 @@ const Login = () => {
 
         loginUser(email, passsword)
         .then(result=>{
-            console.log(result.user)
+            e.target.reset()
+            navigate(redirectedURL, {from: true})
         })
         .catch(err=>{
             console.log(err)

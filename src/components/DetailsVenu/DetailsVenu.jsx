@@ -42,6 +42,7 @@ const DetailsVenu = () => {
         .then(data=>{
             if(data.insertedId){
                 alert('Booking Submitted')
+                e.target.reset()
             }
         })
     }
@@ -104,6 +105,7 @@ const DetailsVenu = () => {
                                             <option>Birthday</option>
                                             <option>Holud Program</option>
                                             <option>Engagement</option>
+                                            <option>Walima</option>
                                             <option>Others</option>
                                             </select>
                                             </div>

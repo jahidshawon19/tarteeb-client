@@ -3,7 +3,7 @@ import { useContext } from "react";
 
 import './Register.css'
 import { AuthContext } from "../../context/UserContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SecondNavbar from "../Shared/SecondNavbar/SecondNavbar";
 
 
@@ -11,6 +11,7 @@ import SecondNavbar from "../Shared/SecondNavbar/SecondNavbar";
 const Register = () => {
     
     const {registerUser} = useContext(AuthContext)
+    const navigate = useNavigate()
 
     const handleRegister = (e)=>{
         e.preventDefault()
@@ -23,7 +24,9 @@ const Register = () => {
         if(password === confirmPassword){
             registerUser(email, password)
             .then(result=>{
-                console.log(result.user)
+                navigate('/')
+                e.target.reset()
+    
             })
             .catch(err=>{
                 console.log(err)
