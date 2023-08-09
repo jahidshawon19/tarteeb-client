@@ -5,7 +5,42 @@ import './DetailsVenu.css';
 
 const DetailsVenu = () => {
     const venuData = useLoaderData()
-    const {club_name,location,capacity,rent,contact,description,img}= venuData
+    const {_id,club_name,location,capacity,rent,contact,description, img}= venuData
+
+    const handleBookingVenue = e =>{
+
+        e.preventDefault(); 
+
+        const club = club_name
+        const clientName = e.target.clientName.value;
+        const phone = e.target.phoneNumber.value;
+        const date = e.target.eventDate.value;
+        const event = e.target.event.value;
+
+        const booking = {
+            club_id:_id,
+            club,
+            img,
+            clientName,
+            phone,
+            date,
+            event
+        }
+        
+        fetch('http://localhost:5000/booking',{
+            method:'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(booking)
+    })
+        .then(res=>res.json())
+        .then(data=>{
+            if(data.insertedId){
+                alert('Booking Submitted')
+            }
+        })
+    }
     return (
         <>
             <DetailsBanner venueData={venuData}></DetailsBanner>
@@ -38,7 +73,7 @@ const DetailsVenu = () => {
                         </div>
                     </div>
 
-                    <div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div className="modal-dialog" role="document">
                                 <div className="modal-content">
                                 <div className="modal-header">
@@ -48,21 +83,22 @@ const DetailsVenu = () => {
                                     </button>
                                 </div>
                                 <div className="modal-body">
-                                    <form>
+                                    <form onSubmit={handleBookingVenue}>
                                             <div className="form-group">
-                                                <input type="email" className="form-control" placeholder="Name"/>
+                                                <input type="text" name="clientName" className="form-control" placeholder="Name"/>
                                             </div>
                                             <div className="form-group">
-                                                <input type="text" className="form-control" placeholder="Phone Number" maxLength={11}/>
+                                                <input type="text" name="phoneNumber" className="form-control" placeholder="Phone Number" maxLength={11}/>
                                             </div>
                                             <div className="form-group">
-                                                <input type="date" className="form-control" placeholder="Event Date"/>
+                                                <input type="date" name="eventDate" className="form-control" placeholder="Event Date"/>
                                             </div>
                                             <div className="form-group">
-                                            <select className="form-control">
+                                            <select className="form-control" name="event">
                                             <option>Weeding</option>
                                             <option>Corporate Event</option>
                                             <option>Birthday</option>
+                                            <option>Holud Program</option>
                                             <option>Engagement</option>
                                             <option>Others</option>
                                             </select>
