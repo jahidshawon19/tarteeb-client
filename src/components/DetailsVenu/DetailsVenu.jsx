@@ -2,10 +2,13 @@ import { useLoaderData } from "react-router-dom";
 import DetailsBanner from "../DetailsBanner/DetailsBanner";
 
 import './DetailsVenu.css'; 
+import { useContext } from "react";
+import { AuthContext } from "../../context/UserContext";
 
 const DetailsVenu = () => {
     const venuData = useLoaderData()
     const {_id,club_name,location,capacity,rent,contact,description, img}= venuData
+    const {user} = useContext(AuthContext)
 
     const handleBookingVenue = e =>{
 
@@ -24,7 +27,8 @@ const DetailsVenu = () => {
             clientName,
             phone,
             date,
-            event
+            event,
+            email: user?.email
         }
         
         fetch('http://localhost:5000/booking',{

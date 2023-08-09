@@ -4,6 +4,7 @@ import { useContext } from "react";
 import './Register.css'
 import { AuthContext } from "../../context/UserContext";
 import { Link } from "react-router-dom";
+import SecondNavbar from "../Shared/SecondNavbar/SecondNavbar";
 
 
 
@@ -35,7 +36,8 @@ const Register = () => {
     }
     return (
         <>
-     
+
+        <SecondNavbar></SecondNavbar>
             <section>
                 <div className="container">
                     <div className="row">

@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import './Login.css';
 import { AuthContext } from '../../context/UserContext';
 import { Link } from 'react-router-dom';
+import SecondNavbar from '../Shared/SecondNavbar/SecondNavbar';
 
 
 const Login = () => {
@@ -28,7 +29,8 @@ const Login = () => {
     
     return (
         <>
-       
+
+        <SecondNavbar></SecondNavbar>
             <section>
                 <div className="container">
                     <div className="row">

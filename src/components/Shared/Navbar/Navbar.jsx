@@ -56,13 +56,14 @@ const Navbar = () => {
 
             {
               user?.email?<li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <Link className="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {user.email}
-              </a>
+              </Link>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <button className="dropdown-item btn btn-danger btn-sm" onClick={handleLogut}>Logout</button>
-
+                <Link to="/profile" className='nav-link text-dark'>Profile</Link>
               </div>
+        
             </li>
             :
             <li className="nav-item">
