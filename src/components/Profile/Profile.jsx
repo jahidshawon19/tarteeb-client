@@ -13,7 +13,7 @@ const Profile = () => {
         .then(data=>setOrder(data))
     },[])
 
-    console.log(order)
+ 
     return (
         <>
             <SecondNavbar></SecondNavbar>
@@ -37,6 +37,7 @@ const Profile = () => {
                                     <th scope="col">Event</th>
                                     <th scope="col">Date</th>
                                     <th scope="col">Status</th>
+                                    <th scope="col"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -51,6 +52,7 @@ const Profile = () => {
                                         
                                         
                                         <td><button className="btn btn-danger btn-sm">Pending</button></td>
+                                        
                                         </tr>
                                     ))
                           
