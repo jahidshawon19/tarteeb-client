@@ -36,12 +36,6 @@ const Navbar = () => {
               <Link className="nav-link" to="/">Home</Link>
             </li>
 
-      
-              <li className="nav-item">
-              <a className="nav-link" href="#">Clubs</a>
-            </li>
-       
-       
             <li className="nav-item">
               <a className="nav-link" href="#">FAQ</a>
             </li>
@@ -51,30 +45,23 @@ const Navbar = () => {
             <li className="nav-item">
                 <a className="nav-link" href="#">Career</a>
             </li>
-
-
-
-            {
-              user?.email?<li className="nav-item dropdown">
-              <Link className="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                {user.email}
-              </Link>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <button className="dropdown-item btn btn-danger btn-sm" onClick={handleLogut}>Logout</button>
-                <Link to="/profile" className='nav-link text-dark'>Profile</Link>
-              </div>
-        
-            </li>
-            :
             <li className="nav-item">
-              <Link className="nav-link" to="/login">Login</Link>
+              {
+                
+                !user?.email?<Link className="nav-link" to="/login">Login</Link>
+                :
+                <Link to="/profile" className='nav-link'>Profile</Link>
+              }
+                
             </li>
-            }
 
           </ul>
           <form className="form-inline my-2 my-lg-0">
             {
-              !user?.email &&<Link className="header-btn my-2 my-sm-0" type="submit" to="/register">Create account</Link>
+              !user?.email?<Link className="header-btn my-2 my-sm-0" type="submit" to="/register">Create account</Link>
+              :
+              <Link className="header-btn my-2 my-sm-0" onClick={handleLogut}>Logout</Link>
+
             }
             
           </form>

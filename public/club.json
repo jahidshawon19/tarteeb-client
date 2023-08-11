@@ -86,6 +86,50 @@
         "description":"Escape to the tranquil Riverside Retreat, where nature's beauty blends with refined comfort. With a capacity of 100 guests, our venue offers stunning riverside views and outdoor seating options for intimate gatherings, private parties, and family celebrations. Our event planning services take care of every detail, ensuring a stress-free experience for you and your guests. Whether it's a birthday celebration or a family reunion, Riverside Retreat promises cherished memories in a serene setting. Book now and experience the peace and joy of riverside celebrations.",
         "img":"https://lh3.googleusercontent.com/p/AF1QipP0US2RO-Ml2l9FWVR3azzvceuw_3xbODRlfK2l=s680-w680-h310",
         "related_img":[]
+    },
+    {
+        "club_id": "9",
+        "club_name":"Prince f Chittagong",
+        "location":"8QPQ+GX7, Port Connecting Rd, Chattogram 4217",
+        "capacity":"1500",
+        "rent":"60,000",
+        "contact":"01899010234",
+        "description":"Escape to the tranquil Riverside Retreat, where nature's beauty blends with refined comfort. With a capacity of 100 guests, our venue offers stunning riverside views and outdoor seating options for intimate gatherings, private parties, and family celebrations. Our event planning services take care of every detail, ensuring a stress-free experience for you and your guests. Whether it's a birthday celebration or a family reunion, Riverside Retreat promises cherished memories in a serene setting. Book now and experience the peace and joy of riverside celebrations.",
+        "img":"https://lh3.googleusercontent.com/p/AF1QipMkzm4bxaWiYd-RRjCxlUj__HbE5Z3x-gSXNkvV=s680-w680-h310",
+        "related_img":[]
+    },
+    {
+        "club_id": "10",
+        "club_name":"5th Avenue Convention Hall",
+        "location":"House#27, Road No 4, Katalgong, Chattogram 4203",
+        "capacity":"1500",
+        "rent":"45,000",
+        "contact":"01899010234",
+        "description":"Escape to the tranquil Riverside Retreat, where nature's beauty blends with refined comfort. With a capacity of 100 guests, our venue offers stunning riverside views and outdoor seating options for intimate gatherings, private parties, and family celebrations. Our event planning services take care of every detail, ensuring a stress-free experience for you and your guests. Whether it's a birthday celebration or a family reunion, Riverside Retreat promises cherished memories in a serene setting. Book now and experience the peace and joy of riverside celebrations.",
+        "img":"https://lh3.googleusercontent.com/p/AF1QipN-x8t74Bazrhf-yW_T-xff4Os6gYenUc3NlfzR=s680-w680-h310",
+        "related_img":[]
+    },
+    {
+        "club_id": "11",
+        "club_name":"Chittagong Club",
+        "location":"Shahid Saifuddin Khaled Rd, Chattogram 4100",
+        "capacity":"3000",
+        "rent":"2,45,000",
+        "contact":"01899010234",
+        "description":"Escape to the tranquil Riverside Retreat, where nature's beauty blends with refined comfort. With a capacity of 100 guests, our venue offers stunning riverside views and outdoor seating options for intimate gatherings, private parties, and family celebrations. Our event planning services take care of every detail, ensuring a stress-free experience for you and your guests. Whether it's a birthday celebration or a family reunion, Riverside Retreat promises cherished memories in a serene setting. Book now and experience the peace and joy of riverside celebrations.",
+        "img":"https://lh3.googleusercontent.com/p/AF1QipNC0zWOLf2o9Ct58L2ALOxsqCrURzYY_h3cf3R9=s680-w680-h310",
+        "related_img":[]
+    },
+    {
+        "club_id": "12",
+        "club_name":"Shoronika Community Centre",
+        "location":"13 Love Ln, Chattogram 4000",
+        "capacity":"1000",
+        "rent":"80,000",
+        "contact":"01899010234",
+        "description":"Escape to the tranquil Riverside Retreat, where nature's beauty blends with refined comfort. With a capacity of 100 guests, our venue offers stunning riverside views and outdoor seating options for intimate gatherings, private parties, and family celebrations. Our event planning services take care of every detail, ensuring a stress-free experience for you and your guests. Whether it's a birthday celebration or a family reunion, Riverside Retreat promises cherished memories in a serene setting. Book now and experience the peace and joy of riverside celebrations.",
+        "img":"https://lh3.googleusercontent.com/p/AF1QipPrenamlYREjaqFC-OaoC9U4UqBIQUIcAW-VYMK=s680-w680-h310",
+        "related_img":[]
     }
 
 ]

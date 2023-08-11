@@ -33,7 +33,7 @@ const SecondNavbar = () => {
                 {
               user?.email?<li className="nav-item dropdown">
               <Link className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                {user.email}
+                  Profile
               </Link>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <button className="dropdown-item btn btn-danger btn-sm" onClick={handleLogut}>Logout</button>

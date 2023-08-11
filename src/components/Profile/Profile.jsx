@@ -46,7 +46,7 @@ const Profile = () => {
               
                     <div className="row">
                         <div className="col-lg-12">
-                        
+                            <p>Email: <span className="text-info">{user?.email}</span></p>
                         </div>
                     </div>
 
@@ -61,6 +61,7 @@ const Profile = () => {
                                     <th scope="col">Club</th>
                                     <th scope="col">Event</th>
                                     <th scope="col">Date</th>
+                                    <th scope="col">Rent</th>
                                     <th scope="col">Status</th>
                                     <th scope="col"></th>
                                     </tr>
@@ -74,6 +75,7 @@ const Profile = () => {
                                         <th>{od.club}</th>
                                         <td>{od.event}</td>
                                         <td>{od.date}</td>
+                                        <td>{od.rent} BDT</td>
                                         
                                         
                                         <td><button className="btn btn-danger btn-sm">Pending</button></td>

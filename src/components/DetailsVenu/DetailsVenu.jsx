@@ -19,6 +19,7 @@ const DetailsVenu = () => {
         const phone = e.target.phoneNumber.value;
         const date = e.target.eventDate.value;
         const event = e.target.event.value;
+        
 
         const booking = {
             club_id:_id,
@@ -28,7 +29,9 @@ const DetailsVenu = () => {
             phone,
             date,
             event,
-            email: user?.email
+            email: user?.email,
+            rent
+          
         }
         
         fetch('http://localhost:5000/booking',{

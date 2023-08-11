@@ -5,14 +5,23 @@ import SingleClub from './SingleClub';
 
 
 const Clubs = () => {
-    const [clubs, setClubs] = useState([])
+    // const [clubs, setClubs] = useState([])
+    const [searchTerm, setSearchTerm] = useState('');
+    const [minRent, setMinRent] = useState('');
+    const [maxRent, setMaxRent] = useState('');
+    const [filteredClubs, setFilteredClubs] = useState([]);
     useEffect(()=>{
         fetch('http://localhost:5000/clubs')
         .then(res=>res.json())
         .then(data =>{
-            setClubs(data)
+            const filtered = data.filter(club => 
+                club.club_name.toLowerCase().includes(searchTerm.toLowerCase()) &&
+                (minRent === '' || parseInt(club.rent.replace(/,/g, '')) >= parseInt(minRent)) &&
+                (maxRent === '' || parseInt(club.rent.replace(/,/g, '')) <= parseInt(maxRent))
+            );
+            setFilteredClubs(filtered)
         })
-    },[])
+    },[searchTerm, minRent, maxRent])
     return (
         <>
 
@@ -28,10 +37,42 @@ const Clubs = () => {
 
 
 
+
                 <div className="container">
+                <div className="row ml-4">
+                        <div className="col-lg-4">
+                                <input
+                                    type="text"
+                                    placeholder="Search by club name..."
+                                    value={searchTerm}
+                                    onChange={e => setSearchTerm(e.target.value)}
+                                    className='form-control'
+                                />
+                        </div>
+                        <div className="col-lg-4">
+                                <input
+                                    type="text"
+                                    placeholder="Min Rent"
+                                    value={minRent}
+                                    onChange={e => setMinRent(e.target.value)}
+                                    className='form-control'
+                                />
+                        </div>
+
+                        <div className="col-lg-4">
+                            <input
+                                type="text"
+                                placeholder="Max Rent"
+                                value={maxRent}
+                                onChange={e => setMaxRent(e.target.value)}
+                                className='form-control'
+                            />
+                        </div>
+                    </div>
+                
                     <div className="row mt-2">
                         {
-                            clubs.map(club=><SingleClub
+                            filteredClubs.map(club=><SingleClub
                                 key={club.club_id}
                                 clubData = {club}
                             ></SingleClub>)
