@@ -1,17 +1,21 @@
 import { useContext, useEffect, useState } from "react";
-import SecondNavbar from "../Shared/SecondNavbar/SecondNavbar";
 import { AuthContext } from "../../Context/userContext";
+import './Profile.css'
+import { FaEnvelope, FaFirstOrder, FaMoneyCheckAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 
 const Profile = () => {
     const {user} = useContext(AuthContext)
     const [order, setOrder] = useState([])
+   
 
 
     useEffect(()=>{
         fetch(`http://localhost:5000/bookings?email=${user?.email}`)
         .then(res=>res.json())
         .then(data=>setOrder(data))
+        
     },[])
 
 
@@ -34,26 +38,69 @@ const Profile = () => {
         
     };
 
+
+  
+
+
  
 
  
     return (
         <>
-            <SecondNavbar></SecondNavbar>
+      
+
+      <section className="content-banner2" style={{ backgroundImage:"url('https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" }}>
+
+        <div className="container">
+        <div className="row d-flex justify-content-center">
+            <div className="col-md-12">
+            <div className="banner-con text-center">
+                <p className="first-title mt-5">Customer Profile</p>
+            </div>
+        </div>
+        </div>
+        </div>
+        </section>
+
+            
             <section>
                 <div className="container">
 
-              
                     <div className="row">
-                        <div className="col-lg-12">
-                            <p>Email: <span className="text-info">{user?.email}</span></p>
+
+                        <div className="col-lg-4">
+                            <div className="card bg-danger py-2">
+                                <div className="card-body text-light">
+                                    <h1><FaEnvelope></FaEnvelope></h1>
+                                    <span>{user?.email}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-4">
+                            <div className="card bg-primary py-2">
+                                <div className="card-body text-light">
+                                    <h1><FaFirstOrder></FaFirstOrder></h1>
+                                    <span>{order.length}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-4">
+                            <div className="card bg-warning py-2">
+                                <div className="card-body text-light">
+                                    <h1><FaMoneyCheckAlt></FaMoneyCheckAlt></h1>
+                                    <Link to=""><span className="ml-5">Proceed to checkout</span></Link>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div className="row">
+              
+            
+
+                    <div className="row mt-5">
                         
                         <div className="col-lg-12">
-                        <h6 className="text-warning text-center">My Orders: {order.length}</h6>
+                        
                         <table className="table">
                                 <thead className="thead-dark">
                                     <tr>
@@ -63,7 +110,7 @@ const Profile = () => {
                                     <th scope="col">Date</th>
                                     <th scope="col">Rent</th>
                                     <th scope="col">Status</th>
-                                    <th scope="col"></th>
+                                    <th scope="col">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>

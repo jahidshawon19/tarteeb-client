@@ -40,15 +40,23 @@ const Clubs = () => {
 
                 <div className="container">
                 <div className="row ml-4">
+
+                  
+                   
                         <div className="col-lg-4">
-                                <input
-                                    type="text"
-                                    placeholder="Search by club name..."
-                                    value={searchTerm}
-                                    onChange={e => setSearchTerm(e.target.value)}
-                                    className='form-control'
-                                />
-                        </div>
+                            
+                                    <input
+                                                type="text"
+                                                placeholder="Search by club name..."
+                                                value={searchTerm}
+                                                onChange={e => setSearchTerm(e.target.value)}
+                                                className='form-control'
+                                    />
+                      
+   
+                            </div>
+                  
+
                         <div className="col-lg-4">
                                 <input
                                     type="text"
@@ -68,7 +76,9 @@ const Clubs = () => {
                                 className='form-control'
                             />
                         </div>
-                    </div>
+                   
+
+                </div>
                 
                     <div className="row mt-2">
                         {

@@ -37,7 +37,7 @@ const Category = () => {
                         <div className="category">
                             
                                 <img src="https://cdn.venuelook.com/images/new-home-images/wedding.png" alt="" />
-                                <p className='event-p'>Weeding</p>
+                                <p className='event-p'>Wedding</p>
                            
                         </div>
                 </div>

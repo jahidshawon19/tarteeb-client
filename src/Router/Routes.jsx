@@ -6,6 +6,7 @@ import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
 import Profile from "../components/Profile/Profile";
 import PrivateRoute from "./PrivateRoute";
+import Contact from "../components/Contact/Contact";
 
 const router = createBrowserRouter([
     {
@@ -21,13 +22,18 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><DetailsVenu></DetailsVenu></PrivateRoute>,
                 loader: ({params})=>fetch(`http://localhost:5000/club/${params.id}`)
             },
+            {
+                path:'/profile',
+                element: <PrivateRoute><Profile></Profile></PrivateRoute>
+            },
+            {
+                path:'/contact',
+                element: <Contact></Contact>
+            }
         ],
       
     },
-    {
-        path:'/profile',
-        element: <PrivateRoute><Profile></Profile></PrivateRoute>
-    },
+
     {
         path:'/login',
         element: <Login></Login>

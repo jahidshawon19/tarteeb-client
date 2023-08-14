@@ -34,7 +34,8 @@ const Login = () => {
                 <div className="row">
                     <div className="col-xs-12 col-sm-7 col-md-5 col-lg-4 login-panel">
                         <div className="brand-logo text-center">
-                            <img src="https://koder.top/demo/authfy/demo/images/brand-logo.png" width="150" alt="" />
+                            {/* <img src="https://koder.top/demo/authfy/demo/images/brand-logo.png" width="150" alt="" /> */}
+                            <h2 className='text-warning font-weight-bold'>Tarteeb.</h2>
                         </div>
                         <div className="tarteeb-login">
                             <div className="tarteeb-panel-login text-center">

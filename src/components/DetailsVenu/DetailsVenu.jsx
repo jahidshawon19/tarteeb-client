@@ -103,7 +103,7 @@ const DetailsVenu = () => {
                                             </div>
                                             <div className="form-group">
                                             <select className="form-control" name="event">
-                                            <option>Weeding</option>
+                                            <option>Wedding</option>
                                             <option>Corporate Event</option>
                                             <option>Birthday</option>
                                             <option>Holud Program</option>
@@ -113,7 +113,7 @@ const DetailsVenu = () => {
                                             </select>
                                             </div>
 
-                                        <button type="submit" className="btn btn-danger">Submit Order</button>
+                                        <button type="submit" className="btn btn-danger">Place Order</button>
                                     </form>
                                 </div>
                                 <div className="modal-footer">
