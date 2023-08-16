@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Category from '../Category/Category';
+// import Category from '../Category/Category';
 import './Club.css';
 import SingleClub from './SingleClub';
 
@@ -30,8 +30,8 @@ const Clubs = () => {
         <>
 
                    
-            <section className="all-clubs mb-5">
-                <Category></Category>
+            <section className="all-clubs py-5 mt-5">
+                {/* <Category></Category> */}
                 <div className="section-title text-center text-dark mb-5">
                     <h2>Top Conventions around the city</h2>
                     <span className="section-sub-title">
@@ -54,7 +54,7 @@ const Clubs = () => {
                                                 placeholder="Search by club name..."
                                                 value={searchTerm}
                                                 onChange={e => setSearchTerm(e.target.value)}
-                                                className='form-control'
+                                                className='form-control searchForm'
                                     />
                       
    
@@ -67,7 +67,7 @@ const Clubs = () => {
                                     placeholder="Min Rent"
                                     value={minRent}
                                     onChange={e => setMinRent(e.target.value)}
-                                    className='form-control'
+                                    className='form-control searchForm'
                                 />
 
                               
@@ -79,7 +79,7 @@ const Clubs = () => {
                                 placeholder="Max Rent"
                                 value={maxRent}
                                 onChange={e => setMaxRent(e.target.value)}
-                                className='form-control'
+                                className='form-control searchForm'
                             />
              
                         </div>

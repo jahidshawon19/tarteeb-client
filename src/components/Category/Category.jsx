@@ -3,7 +3,7 @@ import './Category.css'
 const Category = () => {
     return (
         <>
-                <div className="category-container mt-5">
+                <div className="category-container mt-5 d-none">
                         <div className="category">
                             
                                 <img src="https://cdn.venuelook.com/images/new-home-images/ring.png" alt="" />

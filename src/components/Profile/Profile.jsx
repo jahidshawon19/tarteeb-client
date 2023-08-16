@@ -109,11 +109,12 @@ const Profile = () => {
               
             
 
-                    <div className="row mt-5">
+                    <div className="row mt-5 ">
                         
                         <div className="col-lg-12">
                         
-                        <table className="table">
+                         
+                            <table className="table ">
                                 <thead className="thead-dark">
                                     <tr>
                                     <th scope="col"></th>
@@ -148,6 +149,7 @@ const Profile = () => {
                           
                                 </tbody>
                                 </table>
+                           
                         </div>
                     </div>
                 </div>
