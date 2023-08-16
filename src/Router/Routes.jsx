@@ -8,6 +8,7 @@ import Profile from "../components/Profile/Profile";
 import PrivateRoute from "./PrivateRoute";
 import Contact from "../components/Contact/Contact";
 
+
 const router = createBrowserRouter([
     {
         path:"/",
@@ -29,7 +30,9 @@ const router = createBrowserRouter([
             {
                 path:'/contact',
                 element: <Contact></Contact>
-            }
+            },
+
+        
         ],
       
     },

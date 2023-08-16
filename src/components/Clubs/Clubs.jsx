@@ -10,18 +10,22 @@ const Clubs = () => {
     const [minRent, setMinRent] = useState('');
     const [maxRent, setMaxRent] = useState('');
     const [filteredClubs, setFilteredClubs] = useState([]);
+
     useEffect(()=>{
         fetch('http://localhost:5000/clubs')
         .then(res=>res.json())
         .then(data =>{
             const filtered = data.filter(club => 
                 club.club_name.toLowerCase().includes(searchTerm.toLowerCase()) &&
-                (minRent === '' || parseInt(club.rent.replace(/,/g, '')) >= parseInt(minRent)) &&
-                (maxRent === '' || parseInt(club.rent.replace(/,/g, '')) <= parseInt(maxRent))
+                (minRent === '' || club.rent>= parseInt(minRent)) &&
+                (maxRent === '' || club.rent<= parseInt(maxRent))
             );
             setFilteredClubs(filtered)
         })
     },[searchTerm, minRent, maxRent])
+
+
+
     return (
         <>
 
@@ -59,26 +63,30 @@ const Clubs = () => {
 
                         <div className="col-lg-4">
                                 <input
-                                    type="text"
+                                    type="number"
                                     placeholder="Min Rent"
                                     value={minRent}
                                     onChange={e => setMinRent(e.target.value)}
                                     className='form-control'
                                 />
+
+                              
                         </div>
 
                         <div className="col-lg-4">
                             <input
-                                type="text"
+                                type="number"
                                 placeholder="Max Rent"
                                 value={maxRent}
                                 onChange={e => setMaxRent(e.target.value)}
                                 className='form-control'
                             />
+             
                         </div>
                    
 
                 </div>
+                
                 
                     <div className="row mt-2">
                         {

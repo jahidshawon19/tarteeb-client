@@ -14,7 +14,7 @@ const Footer = () => {
                 <div className="single-footer-caption">
                 <div className="footer-logo">
                     <Link to="/">
-                    <h2>Tarteeb.</h2>
+                    <h2 className='text-warning'>Tarteeb.</h2>
                     </Link>
                 </div>
                 <div className="footer-title">
