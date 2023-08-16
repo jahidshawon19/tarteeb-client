@@ -8,7 +8,7 @@ const SingleClub = ({clubData}) => {
         <>
                 <div className="col-lg-3 mt-4">
                         <div className="card">
-                                <img className="card-img-top" src={img} alt="Card image cap" />
+                                <img className="card-img-top" src={img} alt={`${club_name} Image`} />
                                 <div className="card-body text-center">
                                     <h6 className="card-title text-dark club-title">{club_name}</h6>
                                     <Link to={`/details/${_id}`} className="venu-details-link">Details</Link>

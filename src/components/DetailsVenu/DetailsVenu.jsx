@@ -108,7 +108,7 @@ const DetailsVenu = () => {
                                             <option>Birthday</option>
                                             <option>Holud Program</option>
                                             <option>Engagement</option>
-                                            <option>Walima</option>
+                                            <option>Walimah</option>
                                             <option>Others</option>
                                             </select>
                                             </div>

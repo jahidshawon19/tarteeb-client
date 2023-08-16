@@ -2,22 +2,34 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Context/userContext";
 import './Profile.css'
 import { FaEnvelope, FaFirstOrder, FaMoneyCheckAlt } from "react-icons/fa";
-import { Link } from "react-router-dom";
+
 
 
 const Profile = () => {
     const {user} = useContext(AuthContext)
     const [order, setOrder] = useState([])
+    const [totalRent, setTotalRent] = useState(0)
+
+
+
    
 
 
     useEffect(()=>{
         fetch(`http://localhost:5000/bookings?email=${user?.email}`)
         .then(res=>res.json())
-        .then(data=>setOrder(data))
+        .then(data=>{
+            setOrder(data)
+            })
         
     },[])
 
+    useEffect(()=>{
+        const total = order.reduce((sum, od) => sum + od.rent, 0);
+        setTotalRent(total);
+    },[order])
+
+ 
 
     const handleCancelOrder = (id) => {
         const proceed = confirm('Are you sure to delete?')
@@ -79,7 +91,7 @@ const Profile = () => {
                         <div className="col-lg-4">
                             <div className="card bg-primary py-2">
                                 <div className="card-body text-light">
-                                    <h1><FaFirstOrder></FaFirstOrder></h1>
+                                    <h1><FaFirstOrder></FaFirstOrder></h1><span>Order</span> <br />
                                     <span>{order.length}</span>
                                 </div>
                             </div>
@@ -88,7 +100,7 @@ const Profile = () => {
                             <div className="card bg-warning py-2">
                                 <div className="card-body text-light">
                                     <h1><FaMoneyCheckAlt></FaMoneyCheckAlt></h1>
-                                    <Link to=""><span className="ml-5">Proceed to checkout</span></Link>
+                                    <span>{totalRent} BDT</span>
                                 </div>
                             </div>
                         </div>
@@ -109,7 +121,7 @@ const Profile = () => {
                                     <th scope="col">Event</th>
                                     <th scope="col">Date</th>
                                     <th scope="col">Rent</th>
-                                    <th scope="col">Status</th>
+                           
                                     <th scope="col">Action</th>
                                     </tr>
                                 </thead>
@@ -125,8 +137,8 @@ const Profile = () => {
                                         <td>{od.rent} BDT</td>
                                         
                                         
-                                        <td><button className="btn btn-danger btn-sm">Pending</button></td>
-                                        <td><button onClick={()=>handleCancelOrder(od._id)} className="btn btn-warning btn-sm">Cancel</button></td>
+                                    
+                                        <td><button onClick={()=>handleCancelOrder(od._id)} className="btn btn-danger btn-sm">Cancel</button></td>
                                         
                                         </tr>
                                     ))
@@ -145,3 +157,5 @@ const Profile = () => {
 };
 
 export default Profile;
+
+
