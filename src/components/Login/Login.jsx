@@ -43,7 +43,7 @@ const Login = () => {
                                     <h3 className="auth-title">
                                     Login to your account
                                     </h3>
-                                    <p>Don’t have an account? <Link to="/register">Sign Up Free</Link></p>
+                                    <p className='signInText'>Don’t have an account? <Link to="/register">Sign Up Free</Link></p>
                                 </div>
 
                                 <div className="row social-button">
@@ -53,12 +53,12 @@ const Login = () => {
                                         </a>
                                     </div>
                                     <div className="col-xs-4 col-sm-4">
-                                        <a href="" className="btn btn-lg btn-block btn-info">
+                                        <a href="" className="btn btn-lg btn-block btn-info authBTN">
                                             <FaTwitter></FaTwitter>
                                         </a>
                                     </div>
                                     <div className="col-xs-4 col-sm-4">
-                                        <a href="" className="btn btn-lg btn-block btn-danger">
+                                        <a href="" className="btn btn-lg btn-block btn-danger authBTN">
                                             <FaGooglePlusG></FaGooglePlusG>
                                         </a>
                                     </div>
@@ -79,10 +79,9 @@ const Login = () => {
                                             <div className="form-group">
                                                 <input type="password" className="form-control" placeholder="Password" name="password"/>
                                             </div>
-                                            <div className="form-group">
-                                                <button className="btn btn-primary btn-block" type='submit'>Login with Email</button>
-                                            </div>
+                                          
                                         </form>
+                                        <button className="btn btn-primary btn-block" type='submit'>Login with Email</button>
                                     </div>
 
                                 </div>

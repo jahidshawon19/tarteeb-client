@@ -90,3 +90,20 @@
     font-size: 38px;
     font-weight: 700;
 }
+
+@media only screen and (max-width:480px){
+    .auth-title{
+        font-size: 1.5rem;
+    }
+    .social-button{
+        display: none;
+    }
+    .loginOR{
+        display: none;
+    }
+    .signInText{
+        font-size: 15px;
+    }
+
+
+}

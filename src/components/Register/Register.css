@@ -90,3 +90,20 @@
     font-size: 38px;
     font-weight: 700;
 }
+
+@media only screen and (max-width:480px){
+    .social-button{
+        display: none;
+    }
+    .loginOR{
+        display: none;
+    }
+
+    .loginForm{
+        margin-top: 10%;
+    }
+    .signUpText{
+        font-size: 17px;
+    }
+
+}

@@ -1,64 +1,9 @@
 
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { FaFacebookF, FaTwitter, FaGooglePlusG } from "react-icons/fa";
 import './Register.css'
 import { AuthContext } from "../../context/UserContext";
 import { Link, useNavigate } from "react-router-dom";
-
-
-
-
-// const Register = () => {
-
-//     return (
-//         <>
-
-//         <SecondNavbar></SecondNavbar>
-//             <section>
-//                 <div className="container">
-//                     <div className="row">
-//                         <div className="col-lg-6 mt-5">
-//                             <div className="login-page-img">
-//                                 <img src="https://img.freepik.com/free-vector/global-data-security-personal-data-security-cyber-data-security-online-concept-illustration-internet-security-information-privacy-protection_1150-37336.jpg?w=740&t=st=1691394318~exp=1691394918~hmac=2c275fe755643ff986b57a813013d1203c576233a2c6ee3fc91ce51449342ef8" className="img-fluid" alt="" />
-//                             </div>
-//                         </div>
-//                         <div className="col-lg-1"></div>
-//                         <div className="col-lg-5 mt-2">
-//                             <div className="login-form">
-//                             <form onSubmit={handleRegister}>
-
-//                                 <div className="form-group">  
-//                                     <input type="text" className="form-control" name="userName" placeholder="Full Name" />
-//                                 </div>
-//                                 <div className="form-group">  
-//                                     <input type="email" className="form-control" name="email" placeholder="Enter email" />
-//                                 </div>
-//                                 <div className="form-group">  
-//                                     <input type="password" className="form-control" name="password" placeholder="Password" />
-//                                 </div>
-//                                 <div className="form-group">  
-//                                     <input type="password" name="confirmPassword" className="form-control" placeholder="Confirm Password" />
-//                                 </div>
-
-//                                     <button className='btn btn-warning btn-block' type="submit">Create Account</button>
-//                                     <button className='btn btn-danger btn-block'>Sign in with Google</button>
-//                                     <small>Already have an account? <Link to="/login">Register</Link></small>
-//                                 </form>
-//                             </div>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </section>
-//         </>
-//     );
-// };
-
-// export default Register;
-
-
-
-
-
 
 
 const Register = () => {
@@ -66,6 +11,7 @@ const Register = () => {
         
     const {registerUser} = useContext(AuthContext)
     const navigate = useNavigate()
+    const [errorMessage, setErrorMessage] = useState('')
 
     const handleRegister = (e)=>{
         e.preventDefault()
@@ -83,10 +29,11 @@ const Register = () => {
     
             })
             .catch(err=>{
-                console.log(err)
+                setErrorMessage(err.message)
             })
         }
         else{
+            setErrorMessage('Password Does Not Match')
             return
         }
 
@@ -107,22 +54,22 @@ const Register = () => {
                                     <h3 className="auth-title">
                                     Create to your account
                                     </h3>
-                                    <p>Already Registered? <Link to="/login">Sign In Now</Link></p>
+                                    <p className="signUpText">Already Registered? <Link to="/login">Sign In Now</Link></p>
                                 </div>
 
                                 <div className="row social-button">
                                     <div className="col-xs-4 col-sm-4">
-                                        <a href="" className="btn btn-lg btn-block btn-primary">
+                                        <a href="" className="btn btn-lg btn-block btn-primary authBTN">
                                             <FaFacebookF></FaFacebookF>
                                         </a>
                                     </div>
                                     <div className="col-xs-4 col-sm-4">
-                                        <a href="" className="btn btn-lg btn-block btn-info">
+                                        <a href="" className="btn btn-lg btn-block btn-info authBTN">
                                             <FaTwitter></FaTwitter>
                                         </a>
                                     </div>
                                     <div className="col-xs-4 col-sm-4">
-                                        <a href="" className="btn btn-lg btn-block btn-danger">
+                                        <a href="" className="btn btn-lg btn-block btn-danger authBTN">
                                             <FaGooglePlusG></FaGooglePlusG>
                                         </a>
                                     </div>
@@ -135,6 +82,12 @@ const Register = () => {
                                 </div>
 
                                 <div className="row">
+
+                                  {errorMessage && (
+                                        <div className="alert alert-danger" role="alert">
+                                            {errorMessage}
+                                        </div>
+                                    )}
                                     <div className="col-xs-12 col-sm-12">
                                         <form  className="loginForm" onSubmit={handleRegister}>
                                             <div className="form-group">
