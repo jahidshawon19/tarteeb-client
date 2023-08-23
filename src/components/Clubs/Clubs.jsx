@@ -12,7 +12,7 @@ const Clubs = () => {
     const [filteredClubs, setFilteredClubs] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/clubs')
+        fetch('https://tarteeb-server.vercel.app/clubs')
         .then(res=>res.json())
         .then(data =>{
             const filtered = data.filter(club => 

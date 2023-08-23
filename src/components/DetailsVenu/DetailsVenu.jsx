@@ -34,7 +34,7 @@ const DetailsVenu = () => {
           
         }
         
-        fetch('http://localhost:5000/booking',{
+        fetch('https://tarteeb-server.vercel.app/booking',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

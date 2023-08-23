@@ -16,7 +16,7 @@ const Profile = () => {
 
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/bookings?email=${user?.email}`)
+        fetch(`https://tarteeb-server.vercel.app/bookings?email=${user?.email}`)
         .then(res=>res.json())
         .then(data=>{
             setOrder(data)
@@ -34,7 +34,7 @@ const Profile = () => {
     const handleCancelOrder = (id) => {
         const proceed = confirm('Are you sure to delete?')
         if(proceed){
-            fetch(`http://localhost:5000/booking/${id}`,{
+            fetch(`https://tarteeb-server.vercel.app/booking/${id}`,{
                 method: 'DELETE'
             })
             .then(res=>res.json())

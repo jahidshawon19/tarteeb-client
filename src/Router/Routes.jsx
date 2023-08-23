@@ -7,7 +7,7 @@ import Register from "../components/Register/Register";
 import Profile from "../components/Profile/Profile";
 import PrivateRoute from "./PrivateRoute";
 import Contact from "../components/Contact/Contact";
-
+import NotFound from "../components/NotFound/NotFound";
 
 const router = createBrowserRouter([
     {
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
             {
                 path:'/details/:id',
                 element: <PrivateRoute><DetailsVenu></DetailsVenu></PrivateRoute>,
-                loader: ({params})=>fetch(`http://localhost:5000/club/${params.id}`)
+                loader: ({params})=>fetch(`https://tarteeb-server.vercel.app/club/${params.id}`)
             },
             {
                 path:'/profile',
@@ -31,6 +31,10 @@ const router = createBrowserRouter([
                 path:'/contact',
                 element: <Contact></Contact>
             },
+            {
+                path:"*",
+                element: <NotFound></NotFound>
+            }
 
         
         ],
